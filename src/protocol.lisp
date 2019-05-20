@@ -24,10 +24,8 @@
            (new-value (funcall transformation value)))
       (write lense new-value object))))
 
-(defgeneric access (lense object)
-  (:method ((lense fundamental-lense) object)
-    (read lense object)))
+(defun access (lense object)
+  (read lense object))
 
-(defgeneric (setf access) (value lense object)
-  (:method (value (lense fundamental-lense) object)
-    (write lense value object)))
+(defun (setf access) (value lense object)
+  (write lense value object))
