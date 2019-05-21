@@ -5,7 +5,7 @@ Racket style lenses for the Common Lisp. Portable, extendable, simple.
 Lenses objects acting as a first-class accessors build around SETFable places. They are composable by default, which greatly simplifies building nested representations.
 
 ## Demonstration
-This package exports just few symbols. You can use READ, WRITE (or ACCESS if you prefer to do so) as well as TRANSFORM to interact with lenses. To create a new lense use FOR macro and COMPOSE function.
+This package exports just a few symbols. You can use READ, WRITE (or ACCESS if you prefer to do so) as well as TRANSFORM to interact with lenses. To create a new lense use FOR macro and COMPOSE function.
 
 ```
 (defparameter *data* (list 1 2 3))
