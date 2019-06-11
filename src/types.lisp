@@ -1,8 +1,9 @@
 (cl:in-package #:lense)
 
 
-(defclass fundamental-lense ()
-  ())
+(defclass fundamental-lense (c2mop:funcallable-standard-object)
+  ()
+  (:metaclass c2mop:funcallable-standard-class))
 
 (defclass basic-lense (fundamental-lense)
   ((%read-callback :initarg :read-callback

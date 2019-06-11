@@ -8,7 +8,8 @@
   :author "Marek Kochanowicz"
   :maintainer "Marek Kochanowicz"
   :depends-on (:alexandria
-               :documentation-utils-extensions)
+               :documentation-utils-extensions
+               :closer-mop)
   :serial T
   :pathname "src"
   :components ((:file "package")

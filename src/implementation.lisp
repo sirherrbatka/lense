@@ -1,6 +1,10 @@
 (cl:in-package #:lense)
 
 
+(defmethod initialize-instance :after ((lense fundamental-lense)
+                                       &key &allow-other-keys)
+  (c2mop:set-funcallable-instance-function lense (curry #'read lense)))
+
 (defmethod gather ((lense fundamental-lense)
                    &optional (destination-vector
                               (make-array 0 :fill-pointer 0
