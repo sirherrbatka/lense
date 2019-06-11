@@ -9,8 +9,10 @@
   ((%read-callback :initarg :read-callback
                    :reader read-callback)
    (%write-callback :initarg :write-callback
-                    :reader write-callback)))
+                    :reader write-callback))
+  (:metaclass c2mop:funcallable-standard-class))
 
 (defclass composed-lense (fundamental-lense)
   ((%internal-lenses :initarg :internal-lenses
-                     :reader internal-lenses)))
+                     :reader internal-lenses))
+  (:metaclass c2mop:funcallable-standard-class))
