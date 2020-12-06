@@ -9,7 +9,7 @@
                    &optional (destination-vector
                               (make-array 0 :fill-pointer 0
                                             :adjustable t)))
-  (check-type destination-vector (and vector (satisfies adjustable-array-p)))
+  (check-type destination-vector (and (vector t) (satisfies adjustable-array-p)))
   (vector-push-extend lense destination-vector)
   destination-vector)
 
@@ -17,7 +17,7 @@
                    &optional (destination-vector
                               (make-array 0 :fill-pointer 0
                                             :adjustable t)))
-  (check-type destination-vector (and vector (satisfies adjustable-array-p)))
+  (check-type destination-vector (and (vector t) (satisfies adjustable-array-p)))
   (map nil (lambda (sublense)
              (gather sublense destination-vector))
        (internal-lenses lense))
