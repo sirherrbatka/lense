@@ -7,6 +7,7 @@
   :license "BSD-2"
   :author "Marek Kochanowicz"
   :maintainer "Marek Kochanowicz"
+  :description "Racket sytle lenses for the common lisp."
   :depends-on (:alexandria
                :documentation-utils-extensions
                :closer-mop)
