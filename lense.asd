@@ -18,4 +18,5 @@
                (:file "types")
                (:file "protocol")
                (:file "implementation")
+               (:file "view")
                (:file "documentation")))

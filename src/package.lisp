@@ -11,6 +11,7 @@
    #:for
    #:fundamental-lense
    #:access
+   #:view-class
    #:gather
    #:read
    #:transform
