@@ -43,7 +43,7 @@
      :arguments-and-values ((lense "LENS used for the transformation.")
                             (transformation "Function used to transform value of the OBJECT.")
                             (object "Object being transformed."))
-     :notes "Specialization of this generic function for the COMPOSED-LENSE is none naive and will not pipe object via the sublenses twice."))
+     :notes "Specialization of this generic function for the COMPOSED-LENSE will not pipe object via the sublenses twice."))
 
   (function for
     (:description "Macro. Expands to construction of BASIC-LENS for designated SETFable place."
