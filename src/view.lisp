@@ -86,14 +86,14 @@
         `(lambda (object)
            ,(if (lensep effective-slot)
                 `(read (slot-value object ',(c2mop:slot-definition-name effective-slot))
-                       (slot-value object ',(destination effective-slot)))
+                       (,(destination effective-slot) object))
                 `(slot-value object ',(c2mop:slot-definition-name effective-slot)))))
        (:writer
         `(lambda (new-value object)
            ,(if (lensep effective-slot)
                 `(write (slot-value object ',(c2mop:slot-definition-name effective-slot))
                         new-value
-                        (slot-value object ',(destination effective-slot)))
+                        (setf (,(destination effective-slot) object) new-value))
                 `(setf (slot-value object ',(c2mop:slot-definition-name effective-slot)) new-value)))))
      :specializers specializers)))
 
